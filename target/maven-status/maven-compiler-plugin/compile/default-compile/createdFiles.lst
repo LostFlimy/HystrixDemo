@@ -1,0 +1,8 @@
+com/example/demoload/service/DefaultUserService.class
+com/example/demoload/model/User.class
+com/example/demoload/controller/UserController.class
+com/example/demoload/service/UserService.class
+com/example/demoload/service/HystrixUserService$UserCommand.class
+com/example/demoload/DemoLoadApplication.class
+com/example/demoload/Configuration.class
+com/example/demoload/service/HystrixUserService.class
