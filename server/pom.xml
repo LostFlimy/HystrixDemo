@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.intabia.HystrixDemo</groupId>
-	<artifactId>serviceWithDelay</artifactId>
+	<artifactId>server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>serviceWithDelay</name>
-	<description>serviceWithDelay</description>
+	<name>server</name>
+	<description>server</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -31,6 +31,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.netflix.hystrix</groupId>
+			<artifactId>hystrix-servo-metrics-publisher</artifactId>
+			<version>1.5.18</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.netflix.hystrix</groupId>
+			<artifactId>hystrix-core</artifactId>
+			<version>1.5.18</version>
 		</dependency>
 	</dependencies>
 
