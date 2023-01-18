@@ -24,6 +24,8 @@ public class HystrixUserService implements UserService{
   private int timeoutExecution;
   @Value("${hystrix.maxFailedExecutions}")
   private int maxFailedExecution;
+  @Value("${hystrix.sleepWindow}")
+  private int sleepWindow;
 
   public HystrixUserService() {
     http = new RestTemplate();
@@ -44,7 +46,7 @@ public class HystrixUserService implements UserService{
               .andCommandPropertiesDefaults(HystrixCommandProperties.Setter()
                   .withCircuitBreakerEnabled(true)
                   .withCircuitBreakerRequestVolumeThreshold(maxFailedExecution)
-                  .withCircuitBreakerSleepWindowInMilliseconds(10000)
+                  .withCircuitBreakerSleepWindowInMilliseconds(sleepWindow)
                   .withExecutionTimeoutInMilliseconds(timeoutExecution)
                   .withExecutionTimeoutEnabled(true))
       );
